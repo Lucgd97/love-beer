@@ -102,10 +102,17 @@ body {
 
 .principal {
     padding: 24px 16px;
+    display: grid;
+    gap: 16px;
 }
 
 .title-page{
     font-size: 1.5em;
+    font-weight: 700;
+}
+
+.title-section{
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -114,6 +121,10 @@ body {
     border-radius: 15px;
     overflow: hidden;
     background-color: #2C343A;
+}
+
+.card--prominence{
+    margin-bottom: 16px;
 }
 
 .card__content{
@@ -163,6 +174,7 @@ body {
     height: 40px;
     border-radius: 10px;
     font-size: 0.9rem;
+    justify-self: flex-end;
 }
 
 .card__button--play::before {
@@ -177,4 +189,9 @@ body {
 
 .card__button--prominence::before{
     margin-right: 8px;
+}
+
+.section{
+    display: grid;
+    gap: 16px;
 }
