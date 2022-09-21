@@ -9,6 +9,13 @@ body {
     color: #FFFFFF;
 }
 
+@media screen and (min-width: 1440px) {
+    body{
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+}
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -30,6 +37,59 @@ body {
 
 .header__logo {
     width: 40px;
+}
+
+.header__profile{
+
+    display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .header{
+      background-color: #1D232A;
+      display: grid;
+      column-gap: 32px;
+      grid-template-columns: 1fr auto;  
+      padding: 16px 60px;
+      height: 80px;
+      box-sizing: border-box;
+    }
+
+    .header__menu{
+        display: none;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__profile{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+        align-items: center;
+        justify-self: flex-end;
+        color: #95999C;
+        padding: 8px 32px;
+        border-right: 1px solid #95999C;
+    }
+
+    .header__profile::before{
+        content: "";
+        display: block;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/profile_2.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .header__perfil::after{
+        content: "\e90d";
+        color: #FFFFFF;
+        font-size: 1.5rem;
+    }
 }
 
 .menu-lateral {
@@ -100,6 +160,13 @@ body {
     content: "\e900";
 }
 
+@media screen and (min-width: 1440px) {
+    .menu-lateral{
+        position: static;
+        width: 200px;
+    }
+}
+
 .principal {
     padding: 24px 16px;
     display: grid;
@@ -114,6 +181,15 @@ body {
 .title-section{
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+@media screen and (min-width: 1440px) {
+    .principal{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 32px;
+        padding: 16px 60px;
+    }
 }
 
 .card {
