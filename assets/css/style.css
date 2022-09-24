@@ -334,3 +334,15 @@ body {
     display: grid;
     gap: 16px;
 }
+
+.prominence-video{
+    grid-area: prominence-video;
+}
+
+.videos-recent{
+    grid-area: videos-recent;
+}
+
+.section-videos{
+    grid-area: section-videos;
+}
