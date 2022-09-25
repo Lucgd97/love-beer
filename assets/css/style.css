@@ -86,7 +86,7 @@ body {
         background-position: center;
     }
 
-    .header__perfil::after{
+    .header__profile::after{
         content: "\e90d";
         color: #FFFFFF;
         font-size: 1.5rem;
@@ -192,11 +192,18 @@ body {
         grid-template-columns: auto 1fr auto;
         grid-template-areas: 
             "title-page title-page title-page"
-            "priminence-video priminence-video priminence-video"
+            "prominence-video prominence-video videos-recent"
+            "section-videos section-videos section-videos"
+            "product-recent prominence-product prominence-product"
+            "section-product section-product section-product"
         ;
         column-gap: 32px;
         padding: 16px 60px;
         grid-column: 2;
+    }
+
+    .title-section{
+        grid-column: span 4;
     }
 }
 
@@ -205,6 +212,10 @@ body {
     border-radius: 15px;
     overflow: hidden;
     background-color: #2C343A;
+}
+
+.card__image--desktop{
+    display: none;
 }
 
 .card--prominence{
@@ -224,6 +235,7 @@ body {
 
 .card__title{
     font-size: 1.2rem;
+    font-weight: 700;
     grid-column: span 2;
 }
 
@@ -280,6 +292,24 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+
+    .card--prominence{
+        margin-bottom: 0;
+    }
+
+    .card__image--mobile{
+        display: none;
+    }
+
+    .card__image--desktop{
+        display: block;
+    }
+
+    .card__button--prominence{
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+
     .card--recent{
         display: grid;
         grid-template-columns: auto auto;
@@ -288,12 +318,14 @@ body {
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
 
     .card--recent .card__title{
         grid-column: auto;
     }
 
+           
     .card__link{
         font-size: 0.8rem;
         font-weight: 600;
@@ -335,14 +367,34 @@ body {
     gap: 16px;
 }
 
-.prominence-video{
-    grid-area: prominence-video;
+@media screen and (min-width: 1440px){
+    .section{
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-.videos-recent{
-    grid-area: videos-recent;
-}
-
-.section-videos{
-    grid-area: section-videos;
+@media screen and (min-width: 1440px) {
+    .prominence-video{
+        grid-area: prominence-video;
+    }
+    
+    .videos-recent{
+        grid-area: videos-recent;
+    }
+    
+    .section-videos{
+        grid-area: section-videos;
+    }
+    
+    .prominence-product{
+        grid-area: prominence-product;
+    }
+    
+    .product-recent{
+        grid-area: product-recent;
+    }
+    
+    .section-product{
+        grid-area: section-product;
+    }
 }
